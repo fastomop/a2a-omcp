@@ -1,0 +1,31 @@
+[project]
+name = "agent2agent-omcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "moeller-grellniko", email = "niko.moeller-grell@med.uni-heidelberg.de" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "dotenv>=0.9.9",
+    "python-a2a[all]>=0.5.4",
+    "mcp>=0.1.0",
+    "httpx>=0.24.0",
+    "sqlalchemy>=2.0.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "python-multipart>=0.0.0",
+    "sse-starlette>=2.0.0",
+    "click>=8.1.8",
+    "psutil>=7.0.0",
+    "nest-asyncio>=1.5.8",
+    "sqlglot>=26.17.1",
+]
+
+[project.scripts]
+agent2agent-omcp = "agent2agent_omcp:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

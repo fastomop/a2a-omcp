@@ -1,0 +1,26 @@
+{
+    "database": {
+        "connection_strings": {
+            "default": "postgresql://root:root@localhost:5432/postgres?options=-c%20search_path=omop_cdm"
+        },
+        "schema_directory": "schemas/"
+    },
+    "ollama": {
+        "api_url": "http://localhost:11434/api/generate",
+        "default_model": "codellama:7b-instruct"
+    },
+    "omop_cdm": {
+        "validation_rules": "config/schemas/omop_validation_rules.json",
+        "schema_file": "config/schemas/omop_cdm_schema.json"
+    },
+    "agents": {
+        "medical_expert": {
+            "url": "http://localhost:8001/expert",
+            "timeout": 30
+        },
+        "medical_validator": {
+            "url": "http://localhost:8002/validate",
+            "timeout": 15
+        }
+    }
+} 
